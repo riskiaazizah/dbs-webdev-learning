@@ -1,6 +1,7 @@
 <!DOCTYPE html><html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
         <title>Halaman Profil Bandung</title>
         <link rel="stylesheet" href="styles/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,41 +10,41 @@
         
     </head>
     <body>
-        <header class="judul">
-            <div class="hero-content">
+        <header>
+            <div class="judul">
+                <div class="hero-content">
                 <h1>Bandung</h1>
-                <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus ibu kota provinsi tersebut.</p>
+                    <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus ibu kota provinsi tersebut.</p>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#sejarah">Sejarah</a>
-                    </li>
-                    <li>
-                        <a href="#wisata">Wisata</a>
-                    </li>
-                    <li>
-                        <a href="#kuliner">Kuliner</a>
-                    </li>
-                    <li>
-                        <a href="#geografis">Geografis</a>
-                    </li>
+        </header>
+        
+        <nav>
+            <ul>
                 <li>
-                    <a href="#cuaca">Cuaca</a>
+                    <a href="#sejarah">Sejarah</a>
                 </li>
                 <li>
-                    <a href="#Ulasan">Ulasan</a>
+                    <a href="#wisata">Wisata</a>
                 </li>
                 <li>
-                    <a href="#lainnya">Informasi Lainnya</a>
+                    <a href="#kuliner">Kuliner</a>
                 </li>
-            </ul>
-        </nav>
-    </header>
-
+                <li>
+                    <a href="#geografis">Geografis</a>
+                </li>
+            <li>
+                <a href="#cuaca">Cuaca</a>
+            </li>
+            <li>
+                <a href="#Ulasan">Ulasan</a>
+            </li>
+        </ul>
+    </nav>
+    
         <main>
         <div id="content">
-            <article id="sejarah" class="card">
+        <article id="sejarah" class="card">
         <h2>Sejarah</h2>
         <img src ="./assets/Bandung.jpg" alt="Kota Bandung" class="featured-image">
         <p>
@@ -168,7 +169,7 @@
         <article id="cuaca" class="card">
             <h2>Cuaca</h2>
             <p>Berikut adalah estimasi suhu rata-rata di Kota Bandung berdasarkan waktu:</p>
-            <table border="1">
+            <table class="cuaca">
                 <thead>
                     <tr>
                         <th colspan="2">Waktu</th>
@@ -195,8 +196,42 @@
             </table>
         </article>
 
-        
-        <article id="lainnya" class="card">
+        <article id="Ulasan" class="card">
+            <h2>Buku Tamu Pengunjung</h2>
+            <p>
+                Punya saran atau kesan setelah membaca profil Kota Bandung? Silahkan isi form di bawah ini:
+            </p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <fieldset>
+                    <legend>Form Masukan</legend>
+                    <p>
+                        <label for="name">Nama</label><br>
+                        <input type="hidden" name="access_key" value="84298576-6a11-4e5f-8e14-cbd33adf607c">
+                        <input type="text" name="name" placeholder="Nama/Inisial" required>
+                    </p>
+                    <p>
+                        <label for="email">Alamat Email</label><br>
+                        <input type="email" name="email" placeholder="Alamat Email" required>
+                    </p>
+                    <p>
+                        <label for="message">Pesan</label><br>
+                        <textarea name="message" placeholder="Pesan" required></textarea>
+                    </p>
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
+                </fieldset>
+            </form>
+        </article>
+    </div>
+
+    <aside class="card">
+            <h2>Kota Bandung</h2>
+            <p>Kota Kembang Paris Van Java</p>
+            <figure>
+                <img src="assets/Logo.jpg" alt="Logo Kota Bandung" width="200">
+                <figcaption>Lambang</figcaption>
+            </figure>
             <h2>Informasi Lainnya</h2>
             <p>
                 Berikut adalah beberapa informasi tambahan tentang Kota Bandung:
@@ -225,51 +260,13 @@
                         </tr>
                     </table>
                 </section>
-        </article>
-
-        <section id="Ulasan" class="card">
-            <h2>Buku Tamu Pengunjung</h2>
-            <p>
-                Punya saran atau kesan setelah membaca profil Kota Bandung? Silahkan isi form di bawah ini:
-            </p>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <fieldset>
-                    <legend>Form Masukan</legend>
-                    <p>
-                        <label for="name">Nama Lengkap</label><br>
-                        <input type="hidden" name="access_key" value="84298576-6a11-4e5f-8e14-cbd33adf607c">
-                        <input type="text" name="name" placeholder="Nama Lengkap" required>
-                    </p>
-                    <p>
-                        <label for="email">Alamat Email</label><br>
-                        <input type="email" name="email" placeholder="Alamat Email" required>
-                    </p>
-                    <p>
-                        <label for="message">Pesan</label><br>
-                        <textarea name="message" placeholder="Pesan" required></textarea>
-                    </p>
-                    <p>
-                        <button type="submit">Submit</button>
-                    </p>
-                </fieldset>
-            </form>
-        </section>
-    </div>
-
-    <aside>
-            <h2>Kota Bandung</h2>
-            <p>Kota Kembang Paris Van Java</p>
-            <figure>
-                <img src="assets/Logo.jpg" alt="Logo Kota Bandung" width="200">
-                <figcaption>Lambang</figcaption>
-            </figure>
     </aside>
 
         </main>
 
-        <footer>
+    <footer>
             <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
-        </footer>
+    </footer>
 
     </body>
 </html>

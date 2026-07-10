@@ -10,13 +10,14 @@
 
 body {
     font-family: "Quicksand", sans-serif;
-
     margin: 0;
     padding: 0;
 }
 
 main {
     padding: 20px;
+    display: flex;
+    gap: 1.5rem;
 }
 
 h2,h3 {
@@ -33,20 +34,30 @@ footer {
 }
 
 nav li {
-    display: inline;
     list-style-type: none;
-    margin-right: 20px;
 }
 
 nav{
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 nav a {
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
+    color: white;
 }
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 nav a:hover {
     font-weight: bold;
 }
@@ -55,9 +66,9 @@ nav a:hover {
     text-align: center;
 }
 
-/* * {
-    border: 1px solid red;
-} */
+* {
+    box-sizing: border-box;
+}
 
 .featured-image {
     width:100%;
@@ -70,13 +81,157 @@ nav a:hover {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-
     padding: 20px;
-    margin-top: 20px;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 
 aside {
     text-align: center;
+    flex: 1;
+    align-self: flex-start;
 }
 
+aside table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;   
+}
+
+aside table th {
+    background-color: transparent;
+    color: #333333;
+    padding: 5px;
+}
+
+aside table td {
+    padding: 5px; 
+}
+
+blockquote {
+    font-style: italic;
+}
+blockquote::before{
+    content: '"';
+}
+blockquote::after{
+    content: '"';
+}
+
+table.cuaca {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+table.cuaca th {
+    background-color: #00a2c6;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #00a2c6
+}
+
+table.cuaca td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    color: #333333
+}
+
+fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top:15px;
+}
+
+fieldset label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+legend {
+    font-weight: bold;
+    color: #00a2c6;
+    padding: 0 10px;
+}
+
+fieldset input[type="text"], fieldset input[type="email"], fieldset textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none ;
+    transition: border-color 0.3s ease;
+}
+
+fieldset input[type="text"]:focus, fieldset input[type="email"]:focus, fieldset textarea:focus {
+    border-color: #00a2c6 ;
+    box-shadow: 0 0 5px rgba(0, 162, 198, 0.2);
+}
+
+fieldset input[type="submit"], fieldset button {
+    display: block;
+    width: 100%;
+    background-color: #00a2c6;
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+fieldset input[type="submit"]:hover, fieldset button:hover {
+    background-color: #00819e;
+}
+
+@media screen and (max-width: 1000px) {
+    #content, aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main-aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        padding-inline: 1rem;
+        row-gap: 0.5rem;
+        justify-items: center;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+
+}
 
